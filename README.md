@@ -41,7 +41,15 @@ tensor_output: The pooled representation of shape:
 '''
 tensor_output = NetVLAD.forward(tensor_input)
 ```
-
 It is the same usage for NetRVLAD, NetFV and Soft-DBoF.
+
+NOTE: The toolbox can only pool list of features of same length.
+It was specifically optimized to efficiently do so.
+One way to handle multiple lists of features of variable length
+is to create, via a data augmentation technique, a tensor of shape: 'batch_size'x'max_samples'x'feature_size'.
+Where 'max_samples' would be the maximum number of feature per list.
+Then For each list, you would randomly sample 'max_samples' features to fill the 
+tensor.
+
 
 Antoine Miech
