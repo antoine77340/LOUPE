@@ -1,7 +1,7 @@
 # Learnable mOdUle for Pooling fEatures (LOUPE) Tensorflow Toolbox
 
-LOUPE is a Tensorflow toolbox that efficiently implements several learnable pooling method such as NetVLAD,
-NetRVLAD, NetFV and Soft-DBoF as well as the Context Gating activation from: 
+LOUPE is a Tensorflow toolbox that efficiently implements several learnable pooling method such as NetVLAD[1],
+NetRVLAD[2], NetFV[2] and Soft-DBoF[2] as well as the Context Gating activation from: 
 
 Miech et al., Learnable pooling method with Context Gating for video classification, arXiv.
 
@@ -50,6 +50,23 @@ is to create, via a data augmentation technique, a tensor of shape: 'batch_size'
 Where 'max_samples' would be the maximum number of feature per list.
 Then For each list, you would randomly sample with replacement 'max_samples' features to fill the 
 tensor.
+
+## References
+
+[1] Arandjelovic, Relja and Gronat, Petre and Torii, Akihiko and Pajdla, Tomas and Sivic, Josef, NetVLAD: CNN architecture for weakly supervised place recognition, CVPR 2016
+
+If you use this toolbox, please cite the following paper:
+
+[2] Antoine Miech and Ivan Laptev and Josef Sivic, Learnable pooling method with Context Gating for video classification, arXiv:
+```
+@article{miech17loupe,
+  title={Learnable pooling method with Context Gating for video classification},
+  author={Miech, Antoine and Laptev, Ivan and Sivic, Josef},
+  journal={arXiv:},
+  year={2017},
+}
+```
+
 
 
 Antoine Miech
