@@ -18,7 +18,7 @@ Creating a NetVLAD layer with the following inputs:
 
 feature_size: the dimensionality of the input features
 max_samples: the maximum number of features per list
-cluster_size: the number of cluster
+cluster_size: the number of clusters
 output_dim: the dimensionality of the pooled features after 
 dimension reduction
 gating: If True, adds a Context Gating layer on top of the 
@@ -43,12 +43,12 @@ tensor_output = NetVLAD.forward(tensor_input)
 ```
 It is the same usage for NetRVLAD, NetFV and Soft-DBoF.
 
-NOTE: The toolbox can only pool list of features of same length.
+NOTE: The toolbox can only pool lists of features of the same length.
 It was specifically optimized to efficiently do so.
 One way to handle multiple lists of features of variable length
 is to create, via a data augmentation technique, a tensor of shape: 'batch_size'x'max_samples'x'feature_size'.
 Where 'max_samples' would be the maximum number of feature per list.
-Then For each list, you would randomly sample 'max_samples' features to fill the 
+Then For each list, you would randomly sample with replacement 'max_samples' features to fill the 
 tensor.
 
 
