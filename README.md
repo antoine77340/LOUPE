@@ -1,6 +1,6 @@
-# End-to-End Pooling (E2EP) Tensorflow Toolbox
+# Learnable mOdUle for Pooling fEatures (LOUPE) Tensorflow Toolbox
 
-E2EP is a Tensorflow toolbox that efficiently implements several learnable pooling method such as NetVLAD,
+LOUPE is a Tensorflow toolbox that efficiently implements several learnable pooling method such as NetVLAD,
 NetRVLAD, NetFV and Soft-DBoF as well as the Context Gating activation from: 
 
 Miech et al., Learnable pooling method with Context Gating for video classification, arXiv.
@@ -11,7 +11,7 @@ Miech et al., Learnable pooling method with Context Gating for video classificat
 Creating a NetVLAD block:
 
 ```python
-import e2ep as ep
+import loupe as lp
 
 '''
 Creating a NetVLAD layer with the following inputs:
@@ -26,7 +26,7 @@ pooled representation
 add_batch_norm: If True, adds batch normalization during training
 is_training: If True, the graph is in training mode
 '''
-NetVLAD = ep.NetVLAD(feature_size=1024, max_samples=100, cluster_size=64, 
+NetVLAD = lp.NetVLAD(feature_size=1024, max_samples=100, cluster_size=64, 
                      output_dim=1024, gating=True, add_batch_norm=True,
                      is_training=True)
 
