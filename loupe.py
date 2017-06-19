@@ -13,7 +13,7 @@
 # limitations under the License.
 
 """ Learnable mOdUle for Pooling fEatures (LOUPE)
-Contains a collection of models (NetVLAD, NetRVLAD, NetFV and Soft-DBoF)
+Contains a collection of models (NetVLAD, NetRVLAD, NetFV and Soft-DBoW)
 which enables pooling of a list of features into a single compact 
 representation.
 
@@ -264,7 +264,7 @@ class NetRVLAD(PoolingBaseModel):
 
 
 
-class SoftDBoF(PoolingBaseModel):
+class SoftDBoW(PoolingBaseModel):
     """Creates a Soft Deep Bag-of-Features class.
     """
     def __init__(self, feature_size, max_samples, cluster_size, output_dim,
@@ -279,7 +279,7 @@ class SoftDBoF(PoolingBaseModel):
             is_training=is_training)
 
     def forward(self, reshaped_input):
-        """Forward pass of a Soft-DBoF block.
+        """Forward pass of a Soft-DBoW block.
 
         Args:
         reshaped_input: The input in reshaped in the following form:
