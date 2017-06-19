@@ -1,7 +1,7 @@
 # Learnable mOdUle for Pooling fEatures (LOUPE) Tensorflow Toolbox
 
 LOUPE is a Tensorflow toolbox that efficiently implements several learnable pooling method such as NetVLAD[1],
-NetRVLAD[2], NetFV[2] and Soft-DBoF[2] as well as the Context Gating activation from: 
+NetRVLAD[2], NetFV[2] and Soft-DBoW[2] as well as the Context Gating activation from: 
 
 Miech et al., Learnable pooling with Context Gating for video classification, arXiv, 2017.
 
@@ -45,7 +45,7 @@ tensor_output: The pooled representation of shape:
 '''
 tensor_output = NetVLAD.forward(tensor_input)
 ```
-It is the same usage for NetRVLAD, NetFV and Soft-DBoF.
+It is the same usage for NetRVLAD, NetFV and Soft-DBoW.
 
 NOTE: The toolbox can only pool lists of features of the same length.
 It was specifically optimized to efficiently do so.
