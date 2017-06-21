@@ -64,7 +64,7 @@ If you use this toolbox, please cite the following paper:
 [2] Antoine Miech and Ivan Laptev and Josef Sivic, Learnable pooling with Context Gating for video classification, arXiv:
 ```
 @article{miech17loupe,
-  title={Learnable pooling method Context Gating for video classification},
+  title={Learnable pooling with Context Gating for video classification},
   author={Miech, Antoine and Laptev, Ivan and Sivic, Josef},
   journal={arXiv:},
   year={2017},
