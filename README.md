@@ -3,7 +3,7 @@
 LOUPE is a Tensorflow toolbox that efficiently implements several learnable pooling method such as NetVLAD[1],
 NetRVLAD[2], NetFV[2] and Soft-DBoW[2] as well as the Context Gating activation from: 
 
-Miech et al., Learnable pooling with Context Gating for video classification, arXiv, 2017.
+Miech et al., Learnable pooling with Context Gating for video classification, arXiv:1706.06905, 2017.
 
 It was initially used by the winning approach of the Youtube 8M Kaggle Large-Scale Video understading challenge:
  https://www.kaggle.com/c/youtube8m. We however think these are some general pooling approaches that can be used
@@ -61,12 +61,12 @@ tensor.
 
 If you use this toolbox, please cite the following paper:
 
-[2] Antoine Miech and Ivan Laptev and Josef Sivic, Learnable pooling with Context Gating for video classification, arXiv:
+[2] Antoine Miech and Ivan Laptev and Josef Sivic, Learnable pooling with Context Gating for video classification, arXiv:1706.06905:
 ```
 @article{miech17loupe,
   title={Learnable pooling with Context Gating for video classification},
   author={Miech, Antoine and Laptev, Ivan and Sivic, Josef},
-  journal={arXiv:},
+  journal={arXiv:1706.06905},
   year={2017},
 }
 ```
