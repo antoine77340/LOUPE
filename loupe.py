@@ -114,8 +114,12 @@ class NetVLAD(PoolingBaseModel):
         """Forward pass of a NetVLAD block.
 
         Args:
-        reshaped_input: The input in reshaped in the following form:
-        'batch_size' x 'max_samples' x 'feature_size'.
+        reshaped_input: If your input is in that form:
+        'batch_size' x 'max_samples' x 'feature_size'
+        It should be reshaped in the following form:
+        'batch_size*max_samples' x 'feature_size'
+        by performing:
+        reshaped_input = tf.reshape(input, [-1, features_size])
 
         Returns:
         vlad: the pooled vector of size: 'batch_size' x 'output_dim'
@@ -202,8 +206,12 @@ class NetRVLAD(PoolingBaseModel):
         """Forward pass of a NetRVLAD block.
 
         Args:
-        reshaped_input: The input in reshaped in the following form:
-        'batch_size' x 'max_samples' x 'feature_size'.
+        reshaped_input: If your input is in that form:
+        'batch_size' x 'max_samples' x 'feature_size'
+        It should be reshaped in the following form:
+        'batch_size*max_samples' x 'feature_size'
+        by performing:
+        reshaped_input = tf.reshape(input, [-1, features_size])
 
         Returns:
         vlad: the pooled vector of size: 'batch_size' x 'output_dim'
@@ -282,8 +290,12 @@ class SoftDBoW(PoolingBaseModel):
         """Forward pass of a Soft-DBoW block.
 
         Args:
-        reshaped_input: The input in reshaped in the following form:
-        'batch_size' x 'max_samples' x 'feature_size'.
+        reshaped_input: If your input is in that form:
+        'batch_size' x 'max_samples' x 'feature_size'
+        It should be reshaped in the following form:
+        'batch_size*max_samples' x 'feature_size'
+        by performing:
+        reshaped_input = tf.reshape(input, [-1, features_size])
 
         Returns:
         bof: the pooled vector of size: 'batch_size' x 'output_dim'
@@ -351,8 +363,12 @@ class NetFV(PoolingBaseModel):
         """Forward pass of a NetFV block.
 
         Args:
-        reshaped_input: The input in reshaped in the following form:
-        'batch_size' x 'max_samples' x 'feature_size'.
+        reshaped_input: If your input is in that form:
+        'batch_size' x 'max_samples' x 'feature_size'
+        It should be reshaped in the following form:
+        'batch_size*max_samples' x 'feature_size'
+        by performing:
+        reshaped_input = tf.reshape(input, [-1, features_size])
 
         Returns:
         fv: the pooled vector of size: 'batch_size' x 'output_dim'
