@@ -52,8 +52,7 @@ It was specifically optimized to efficiently do so.
 One way to handle multiple lists of features of variable length
 is to create, via a data augmentation technique, a tensor of shape: 'batch_size'x'max_samples'x'feature_size'.
 Where 'max_samples' would be the maximum number of feature per list.
-Then For each list, you would randomly sample with replacement 'max_samples' features to fill the 
-tensor.
+Then for each list, you would fill the tensor with 0 values.
 
 ## References
 
