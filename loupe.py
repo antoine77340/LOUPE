@@ -87,7 +87,7 @@ class PoolingBaseModel(object):
         else:
           gating_biases = tf.get_variable("gating_biases",
             [input_dim],
-            initializer = tf.random_normal(stddev=1 / math.sqrt(input_dim)))
+            initializer = tf.random_normal_initializer(stddev=1 / math.sqrt(input_dim)))
           gates += gating_biases
 
         gates = tf.sigmoid(gates)
@@ -319,7 +319,7 @@ class SoftDBoW(PoolingBaseModel):
         else:
           cluster_biases = tf.get_variable("cluster_biases",
             [self.cluster_size],
-            initializer = tf.random_normal(
+            initializer = tf.random_normal_initializer(
                 stddev=1 / math.sqrt(self.feature_size)))
           activation += cluster_biases
 
@@ -399,7 +399,7 @@ class NetFV(PoolingBaseModel):
         else:
           cluster_biases = tf.get_variable("cluster_biases",
             [self.cluster_size],
-            initializer = tf.random_normal(
+            initializer = tf.random_normal_initializer(
                 stddev=1 / math.sqrt(self.feature_size)))
           activation += cluster_biases
         
