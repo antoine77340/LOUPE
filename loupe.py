@@ -142,7 +142,7 @@ class NetVLAD(PoolingBaseModel):
               scope="cluster_bn")
         else:
           cluster_biases = tf.get_variable("cluster_biases",
-            [cluster_size],
+            [self.cluster_size],
             initializer = tf.random_normal_initializer(
             stddev=1 / math.sqrt(self.feature_size)))
           activation += cluster_biases
@@ -234,7 +234,7 @@ class NetRVLAD(PoolingBaseModel):
               scope="cluster_bn")
         else:
           cluster_biases = tf.get_variable("cluster_biases",
-            [cluster_size],
+            [self.cluster_size],
             initializer = tf.random_normal_initializer(
                 stddev=1 / math.sqrt(self.feature_size)))
           tf.summary.histogram("cluster_biases", cluster_biases)
